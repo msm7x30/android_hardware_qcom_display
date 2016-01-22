@@ -291,7 +291,7 @@ inline void MdpCtrl::save() {
 
 inline void MdpCtrl::restore() {
     if(static_cast<ssize_t>(mLkgo.id) == MSMFB_NEW_REQUEST) {
-        ALOGE("MdpCtrl Lkgo ov has id -1, will not restore");
+        //ALOGE("MdpCtrl Lkgo ov has id -1, will not restore");
         return;
     }
     mOVInfo = mLkgo;
