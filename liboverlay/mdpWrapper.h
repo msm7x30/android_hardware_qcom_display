@@ -148,8 +148,8 @@ inline bool rotate(int fd, msm_rotator_data_info& rot) {
 
 inline bool setOverlay(int fd, mdp_overlay& ov) {
     if (ioctl(fd, MSMFB_OVERLAY_SET, &ov) < 0) {
-        ALOGE("Failed to call ioctl MSMFB_OVERLAY_SET err=%s",
-                strerror(errno));
+        //ALOGE("Failed to call ioctl MSMFB_OVERLAY_SET err=%s",
+        //        strerror(errno));
         return false;
     }
     return true;

@@ -155,10 +155,10 @@ bool MdpCtrl::set() {
     if(this->ovChanged() || mForceSet) {
         mForceSet = false;
         if(!mdp_wrapper::setOverlay(mFd.getFD(), mOVInfo)) {
-            ALOGE("MdpCtrl failed to setOverlay, restoring last known "
-                  "good ov info");
-            mdp_wrapper::dump("== Bad OVInfo is: ", mOVInfo);
-            mdp_wrapper::dump("== Last good known OVInfo is: ", mLkgo);
+            //ALOGE("MdpCtrl failed to setOverlay, restoring last known "
+            //      "good ov info");
+            //mdp_wrapper::dump("== Bad OVInfo is: ", mOVInfo);
+            //mdp_wrapper::dump("== Last good known OVInfo is: ", mLkgo);
             this->restore();
             return false;
         }
