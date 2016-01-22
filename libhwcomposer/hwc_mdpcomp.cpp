@@ -201,8 +201,8 @@ bool MDPComp::setupBasePipe(hwc_context_t *ctx) {
     ovInfo.id = MSMFB_NEW_REQUEST;
 
     if (ioctl(fb_fd, MSMFB_OVERLAY_SET, &ovInfo) < 0) {
-        ALOGE("Failed to call ioctl MSMFB_OVERLAY_SET err=%s",
-              strerror(errno));
+        //ALOGE("Failed to call ioctl MSMFB_OVERLAY_SET err=%s",
+        //      strerror(errno));
         return false;
     }
 

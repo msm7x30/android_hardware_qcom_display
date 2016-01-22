@@ -191,7 +191,7 @@ inline void Ctrl::dump() const {
 
 inline bool Ctrl::commit() {
     if(!mMdp.set()) {
-        ALOGE("Ctrl commit failed set overlay");
+        //ALOGE("Ctrl commit failed set overlay");
         return false;
     }
     return true;
