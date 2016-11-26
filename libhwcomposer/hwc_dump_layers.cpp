@@ -326,7 +326,6 @@ void HwcDebug::dumpLayer(size_t layerIndex, hwc_layer_1_t hwLayers[])
                 break;
         }
         if (SkBitmap::kNo_Config != tempSkBmpConfig) {
-            tempSkBmp->setConfig(tempSkBmpConfig, hnd->width, hnd->height);
             tempSkBmp->setPixels((void*)hnd->base);
             bResult = SkImageEncoder::EncodeFile(dumpFilename,
                                     *tempSkBmp, SkImageEncoder::kPNG_Type, 100);

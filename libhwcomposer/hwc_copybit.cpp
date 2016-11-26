@@ -199,9 +199,6 @@ bool CopyBit::prepare(hwc_context_t *ctx, hwc_display_contents_1_t *list,
             ((hnd->bufferType == BUFFER_TYPE_VIDEO && useCopybitForYUV) ||
             (hnd->bufferType == BUFFER_TYPE_UI && useCopybitForRGB))) {
             layerProp[i].mFlags |= HWC_COPYBIT;
-            if (ctx->mMDP.version <= qdutils::MDP_V4_3)
-                list->hwLayers[i].compositionType = HWC_BLIT;
-            else
                 list->hwLayers[i].compositionType = HWC_OVERLAY;
             mCopyBitDraw = true;
         } else {
